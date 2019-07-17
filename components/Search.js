@@ -7,7 +7,7 @@ Search = React.createClass({
 
     handleChange: function(event) {
         var searchingText = event.target.value;
-        this.setState({searchingText: searchingText});
+        this.setState({searchingText});
     
         if (searchingText.length > 2) {
           this.props.onSearch(searchingText);
@@ -27,7 +27,7 @@ Search = React.createClass({
                  type="text"
                  onChange={this.handleChange}
                  onKeyUp={this.handleKeyUp}
-                 placeholder={"Write here"}
+                 placeholder={"Write here..."}
                  style={styles}
                  value={this.state.searchTerm}
                 />
